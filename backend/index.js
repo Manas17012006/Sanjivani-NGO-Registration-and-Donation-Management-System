@@ -45,14 +45,13 @@ async function connectdb() {
     });
 
     isConnected = db.connections[0].readyState;
-    console.log("✅ MongoDB connected");
+    console.log(" MongoDB connected");
   } catch (err) {
-    console.error("❌ MongoDB error:", err);
+    console.error(" MongoDB error:", err);
     throw err;
   }
 }
 
-// ---------- AUTO CONNECT PER REQUEST ----------
 app.use(async (req, res, next) => {
   try {
     await connectdb();
@@ -72,6 +71,4 @@ app.use("/api/user", user_route);
 app.use("/api/donation", payment_route);
 app.use("/api", export_route);
 
-// ❌ DO NOT app.listen()
-// ✅ EXPORT FOR VERCEL
 module.exports = app;
