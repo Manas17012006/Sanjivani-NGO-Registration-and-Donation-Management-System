@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width:100%;
+  top:0;
+  z-index:1;
+  padding: 16px 48px;
+  background: linear-gradient(90deg, #ffffff, #f4f9ff);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+  width: 190px;
+  cursor: pointer;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c2c2c;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0a7cff;
+}
+
+.active {
+  color: #0a7cff;
+  font-weight: 600;
+}
+
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.donate {
+  padding: 10px 22px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  box-shadow: 0 6px 15px rgba(255, 122, 24, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.donate:hover {
+  transform: translateY(-2px);
+}
+
+.admin {
+  padding: 8px 20px;
+  border-radius: 22px;
+  border: 2px solid #0a7cff;
+  background: transparent;
+  color: #0a7cff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin:hover {
+  background-color: #0a7cff;
+  color: white;
+}
+
+.menu
+{
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .navLinks {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+}

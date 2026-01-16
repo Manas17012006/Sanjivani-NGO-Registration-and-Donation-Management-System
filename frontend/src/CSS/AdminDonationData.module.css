@@ -1,0 +1,58 @@
+/* Layout */
+.wrapper {
+  display: flex;
+}
+
+.content {
+  padding-left: 265px;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+/* Header */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+/* Filter Bar */
+.filterBar {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterBar select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Donation List Container */
+.listContainer {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow-x: auto;
+  background: #ffffff;
+}
+
+/* Empty State */
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,62 @@
+.nodisplay {
+  display: none;
+}
+.bigdiv {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  background-color: white;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 2sec ease;
+  z-index: 1000;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.active {
+  background-color: rgb(213, 212, 212);
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.donate {
+  padding: 10px 22px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  box-shadow: 0 6px 15px rgba(255, 122, 24, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.donate:hover {
+  transform: translateY(-2px);
+}
+
+.admin {
+  padding: 8px 20px;
+  border-radius: 22px;
+  border: 2px solid #0a7cff;
+  background: transparent;
+  color: #0a7cff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin:hover {
+  background-color: #0a7cff;
+  color: white;
+}
