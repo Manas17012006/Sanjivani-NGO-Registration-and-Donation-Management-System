@@ -121,9 +121,6 @@ const EmailVerify = () => {
           </button>
         </form>
 
-        <p className={styles.resend}>
-          Didn’t receive OTP? <span>Resend</span>
-        </p>
       </div>
     </div>
   );
