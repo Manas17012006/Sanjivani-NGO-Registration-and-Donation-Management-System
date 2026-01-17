@@ -21,7 +21,7 @@ const DonationHistory = () => {
     <div style={styles.page}>
       <NewNav />
 
-      <h2 style={styles.heading}>Donation History</h2>
+      <div style={styles.gap}><h2 style={styles.heading}>Donation History</h2></div>
     <h3 style={styles.heading}>Total Donation : ₹ {totalDonation}</h3>
       {userDonationData && userDonationData.length === 0 && (
         <p style={styles.empty}>No donations yet</p>
@@ -73,7 +73,9 @@ const styles = {
     marginLeft: "70px",    
     overflowX: "auto",
   },
-
+gap:{
+    marginLeft: "90px",   
+}
   heading: {
     textAlign: "center",
     margin: "30px 0",
