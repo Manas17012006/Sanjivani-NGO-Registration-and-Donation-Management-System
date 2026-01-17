@@ -22,7 +22,7 @@ export const AppcontextProvider = (props) => {
         console.log(`Logged in status is ${data.info.isVerified}`)
         console.log(data.info);
       } else {
-        toast.error(data.message);
+        console.log(data.message);
       }
     } catch (err) {
       toast.error(err.message);
@@ -40,7 +40,7 @@ export const AppcontextProvider = (props) => {
         setUserDonationData(data.info);
         console.log(data.info);
       } else {
-        toast.error(data.message);
+        console.log(data.message);
       }
     } catch (err) {
       toast.error(err.message);
@@ -57,7 +57,7 @@ export const AppcontextProvider = (props) => {
         setDonationData(data.info);
         console.log(data.info);
       } else {
-        toast.error(data.message);
+        console.log(data.message);
       }
     } catch (err) {
       toast.error(err.message);
@@ -88,7 +88,7 @@ export const AppcontextProvider = (props) => {
     getAllUserData();
   }, []);
   useEffect(() => {
-  console.log("🔥 isLoggedIn UPDATED →", isLoggedIn);
+  console.log(" isLoggedIn UPDATED →", isLoggedIn);
 }, [isLoggedIn]);
 
   const value = {
