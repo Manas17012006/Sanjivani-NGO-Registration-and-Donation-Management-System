@@ -26,7 +26,7 @@ const DonationHistory = () => {
       {/* Content */}
       <div style={styles.page}>
         <div style={styles.header}>
-          <h2 style={styles.heading}>Donation History</h2>
+          <h2 style={styles.heading}></h2>
           <h3 style={styles.subHeading}>Total Donation : ₹ {totalDonation}</h3>
         </div>
 
@@ -76,12 +76,12 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
-    marginLeft: "260px", // keep if sidebar exists
+    marginLeft: "260px", 
     padding: "20px",
     overflowX: "hidden",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center", // center content horizontally
+    alignItems: "center",
   },
 
   header: {

@@ -33,7 +33,7 @@ export default function AdminSidebar() {
           position: fixed;
           top: 15px;
           left: 15px;
-          z-index: 0;
+          z-index: 1001;
           background: #fff;
           border: none;
           padding: 8px;
