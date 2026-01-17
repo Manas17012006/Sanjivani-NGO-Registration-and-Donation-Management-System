@@ -82,11 +82,28 @@
 }
 
 
-
 @media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
   .content {
-    margin-left: 0;
+    margin-left: 0;        
     width: 100%;
     padding: 16px;
   }
+
+  .title {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .filterBar {
+    justify-content: center;
+  }
+
+  .listContainer {
+    overflow-x: auto;
+  }
 }
+
