@@ -59,6 +59,7 @@ export default function AdminSidebar() {
         .sidebar-header {
           padding-bottom: 20px;
           border-bottom: 1px solid #eee;
+          margin-left:20px;
         }
 
         .sidebar-header h1 {
@@ -124,7 +125,6 @@ export default function AdminSidebar() {
         }
       `}</style>
 
-      {/* Mobile Menu Button */}
       <button className="menu-btn" onClick={() => setOpen(!open)}>
         {open ? <X /> : <Menu />}
       </button>
