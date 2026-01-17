@@ -1,24 +1,33 @@
-/* Layout */
+
+
 .wrapper {
   display: flex;
+  width: 100%;
+  min-height: 100vh;
 }
+
+
 
 .content {
-  padding-left: 265px;
-  padding-right: 20px;
-  padding-top: 20px;
-  width: 100%;
+  margin-left: 265px;                 
+  padding: 20px;
+  width: calc(100% - 265px);          
+  box-sizing: border-box;
+  background-color: #f9fafb;
 }
 
-/* Header */
+
+
 .title {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 16px;
+  color: #111827;
   text-decoration: underline;
 }
 
-/* Filter Bar */
+
+
 .filterBar {
   margin-bottom: 20px;
   display: flex;
@@ -32,17 +41,39 @@
   border: 1px solid #d1d5db;
   font-size: 14px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
-/* Donation List Container */
+
+
+.totalAmount {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+
+
 .listContainer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;                    
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  overflow-x: auto;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
-/* Empty State */
+.listContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+
 .empty {
   padding: 20px;
   text-align: center;
@@ -50,9 +81,12 @@
   font-size: 14px;
 }
 
-/* Responsive */
+
+
 @media (max-width: 768px) {
   .content {
-    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
   }
 }
