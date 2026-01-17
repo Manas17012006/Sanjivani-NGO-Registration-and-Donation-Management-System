@@ -28,13 +28,13 @@ async function register(req, res) {
     const mailOptions = {
       from: process.env.SENDER_EMAIL,
       to: email,
-      subject: "Welcome to NGOConnect",
+      subject: "Welcome to Sanjivani NGO",
       html: `<div style="font-family:Arial,sans-serif;
             padding:15px;
             color:#333;">
 
   <h2 style="margin-bottom:8px;">
-    Welcome to NGOConnect 🎉
+    Welcome to Sanjivani NGO 🎉
   </h2>
 
   <p style="font-size:14px;">
@@ -46,7 +46,7 @@ async function register(req, res) {
   </p>
 
   <p style="margin-top:15px;font-size:13px;">
-    — Team <strong>NGOConnect</strong>
+    — Team <strong>SANJIVANI</strong>
   </p>
 
 </div>
@@ -103,7 +103,7 @@ async function sendVerifyEmail(req, res) {
     }
     const otp = String(Math.floor(100000 + Math.random() * 900000));
     user.otp = otp;
-    user.otpExp = Date.now() + 1 * 60 * 60 * 1000; //1 hour
+    user.otpExp = Date.now() + 3 * 60 * 1000; //1 hour
     await user.save();
     const mailOption = {
       from: process.env.SENDER_EMAIL,
@@ -130,7 +130,7 @@ async function sendVerifyEmail(req, res) {
   <p style="font-size:12px;color:#777;">
     Please do not share this OTP with anyone.
   </p>
-
+    <p style="font-size:12px;color:#777;">The OTP is valid for 3 minutes.</p>
 </div>
 `,
     };
