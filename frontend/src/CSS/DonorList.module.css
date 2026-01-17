@@ -4,15 +4,16 @@
   min-height: 100vh;
 }
 
+/* MAIN CONTENT */
 .content {
-  margin-left: 260px; /* sidebar width */
+  margin-left: 260px;              /* sidebar width */
   padding: 20px;
-  width: calc(100% - 260px);
+  width: calc(100% - 260px);       /* 🔥 THIS IS CRITICAL */
+  box-sizing: border-box;
   overflow-x: hidden;
-  margin-bottom: 30px;
 }
 
-/* Header */
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,7 +28,6 @@
   font-weight: 600;
 }
 
-/* Export button */
 .exportBtn {
   background: #2563eb;
   color: #ffffff;
@@ -42,7 +42,7 @@
   background: #1d4ed8;
 }
 
-/* Filters */
+/* FILTERS */
 .filters {
   margin-bottom: 30px;
   display: flex;
@@ -64,24 +64,15 @@
   font-size: 14px;
 }
 
-.blue {
-  color: rgb(73, 73, 83);
-}
-
-.span {
-  font-weight: 700;
-  color: rgb(76, 76, 76);
-}
-
-
+/* TABLE SCROLL FIX */
 .tableWrapper {
   width: 100%;
-  overflow-x: auto; 
+  overflow-x: auto;                /* 🔥 horizontal scroll */
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  background: white;
 }
 
+/* SCROLLBAR */
 .tableWrapper::-webkit-scrollbar {
   height: 6px;
 }
@@ -91,6 +82,7 @@
   border-radius: 6px;
 }
 
+/* 🔥 MOBILE FIX — REMOVE SIDEBAR OFFSET */
 @media (max-width: 768px) {
   .content {
     margin-left: 0;
