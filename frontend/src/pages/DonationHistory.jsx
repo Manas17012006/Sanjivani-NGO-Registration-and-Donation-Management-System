@@ -78,7 +78,7 @@ const styles = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
 
-    marginLeft: "70px", 
+    marginLeft: "2700px", 
     padding: "20px",
     marginTop:"150px",
     overflowX: "hidden",
