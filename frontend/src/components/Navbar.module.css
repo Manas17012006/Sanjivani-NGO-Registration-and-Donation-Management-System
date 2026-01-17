@@ -88,6 +88,9 @@
     display: none;
   }
 
+  .navbar{
+    padding:16px 20px;
+  }
   .actions {
     display: none;
   }
