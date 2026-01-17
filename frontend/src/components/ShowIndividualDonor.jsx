@@ -14,7 +14,17 @@ const ShowIndividualDonor = ({ donor, user, onDelete }) => {
     >
       <div style={{ fontWeight: 500 }}>{user.name}</div>
 
-      <div style={{ color: "#2563eb" }}>{user.email}</div>
+      {/* EMAIL FIX */}
+      <div
+        style={{
+          color: "#2563eb",
+          wordBreak: "break-all",
+          overflowWrap: "anywhere",
+          whiteSpace: "normal",
+        }}
+      >
+        {user.email}
+      </div>
 
       <div style={{ color: "#6b7280" }}>
         {new Date(user.createdAt).toLocaleDateString()}
