@@ -72,7 +72,7 @@ const Navbar = () => {
         <button className={styles.donate} onClick={(e)=>handleLogin(e)}>LOGIN / SIGNUP</button>
         {/* <button className={styles.admin} onClick={()=>navigate("/adminlogin")}>Admin Login</button> */}
       </div>
-       <div className={styles.menu} onClick={()=>setMenu(!ismenu)}><img src={menu} alt="menu" width="50"/></div>
+       <div className={styles.menu} onClick={()=>setMenu(!ismenu)}><img src={menu} alt="menu" width="40"/></div>
        <Sidebarmenu ismenu={ismenu} setMenu={setMenu}/>
     </nav>
   );
