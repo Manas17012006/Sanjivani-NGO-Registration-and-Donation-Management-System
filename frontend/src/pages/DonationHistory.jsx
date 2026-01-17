@@ -26,7 +26,7 @@ const DonationHistory = () => {
       {/* Content */}
       <div style={styles.page}>
         <div style={styles.header}>
-          <h2 style={styles.heading}></h2>
+          <h2 style={styles.heading}>Donation History</h2>
           <h3 style={styles.subHeading}>Total Donation : ₹ {totalDonation}</h3>
         </div>
 
