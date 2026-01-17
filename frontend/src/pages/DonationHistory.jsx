@@ -76,7 +76,6 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
-    marginLeft: "260px", 
     padding: "20px",
     overflowX: "hidden",
     display: "flex",
