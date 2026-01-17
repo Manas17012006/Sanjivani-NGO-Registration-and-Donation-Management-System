@@ -18,6 +18,7 @@ const Login = () => {
   });
   const { backendUrl,isAdminLogged,setIsAdminLogged } = useContext(Appcontext);
   const [load,setLoad]=useState(false);
+  const [sendOtp,setSendOtp]=useState(false);
   //handlechange
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,20 +31,24 @@ const Login = () => {
   ////send verification otp////
   async function sendVerification()
   {
+    setSendOtp(true);
     try{
         const {data}=await api.post(backendUrl+"/api/auth/send-otp",{});
         if(data.success)
         {
           toast.success(data.message);
+          setSendOtp(false);
           navigate("/email-verify");
         }
         else
         {
           toast.error(data.message);
+           setSendOtp(false);
         }
     }catch(err)
     {
       toast.error(err.message);
+       setSendOtp(false);
     }
   }
   //handleSubmit
@@ -105,7 +110,8 @@ const Login = () => {
   return (
     <div className={styles.loginPage}>
       {load && mode==="Signup" ? <Loading message="Registering, Please Wait"/> : null}
-      {load && mode==="Login" ? <Loading message="Sending Otp, Please Wait"/> : null}
+      {load && mode==="Login" ? <Loading message="Checking Info, Please Wait"/> : null}
+      {sendOtp ? <Loading message="Sending OTP..."/> : null};
       <img
         src={heart}
         alt="logo"
