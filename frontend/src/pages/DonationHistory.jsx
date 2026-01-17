@@ -69,7 +69,7 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
-    paddingBottom: "40px",
+    padding: "70px",
     marginLeft: "70px",    
     overflowX: "auto",
   },
