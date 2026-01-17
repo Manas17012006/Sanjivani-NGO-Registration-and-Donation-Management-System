@@ -39,8 +39,8 @@ function App() {
         <Route path="/profile" element={isLoggedIn ? <Profile/> : <Navigate to="/"/>}/>
         {/* <Route path="/profile" element={ <Profile/>}/> */}
         <Route path="/donationHistory" element={isLoggedIn ? <DonationHistory/> : <Navigate to="/"/>}/>
-        <Route path="/donorlist" element={isAdminLogged ?<DonorList/> : <Navigate to="/"/>}/>
-        <Route path="/donationdata" element={isAdminLogged ?<AdminDonationData/> : <Navigate to="/"/>}/>
+        <Route path="/donorlist" element={<DonorList/> }/>
+        <Route path="/donationdata" element={<AdminDonationData/>}/>
       </Routes>
     </div>
   )
