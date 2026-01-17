@@ -1,67 +1,75 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import NewNav from "../components/NewNav";
 import { Appcontext } from "../context/Appcontext";
 
 const DonationHistory = () => {
   const { userDonationData, getUserDonation } = useContext(Appcontext);
+
   useEffect(() => {
     getUserDonation();
   }, []);
+
   let totalDonation = 0;
-  if(userDonationData)
-  {
-        for(let i=0;i<userDonationData.length;i++)
-        {
-            const item=userDonationData[i];
-            if(item.status==="success")totalDonation+=item.amount;
-        }
+  if (userDonationData) {
+    for (let i = 0; i < userDonationData.length; i++) {
+      if (userDonationData[i].status === "success") {
+        totalDonation += userDonationData[i].amount;
+      }
+    }
   }
 
   return (
-    <div style={styles.page}>
+    <>
+      {/* ✅ Sidebar */}
       <NewNav />
 
-      <div style={styles.gap}><h2 style={styles.heading}>Donation History</h2></div>
-    <h3 style={styles.heading}>Total Donation : ₹ {totalDonation}</h3>
-      {userDonationData && userDonationData.length === 0 && (
-        <p style={styles.empty}>No donations yet</p>
-      )}
+      {/* ✅ Page content starts AFTER sidebar */}
+      <div style={styles.page}>
+        <h2 style={styles.heading}>Donation History</h2>
+        <h3 style={styles.subHeading}>
+          Total Donation : ₹ {totalDonation}
+        </h3>
 
-      <div style={styles.list}>
-        {userDonationData &&
-          userDonationData.map((item) => {
-            const isSuccess = item.status === "success";
-            return (
-              <div key={item._id} style={styles.card}>
-                <div style={styles.top}>
-                  <span style={styles.amount}>₹ {item.amount}</span>
+        {userDonationData && userDonationData.length === 0 && (
+          <p style={styles.empty}>No donations yet</p>
+        )}
 
-                  <span
-                    style={{
-                      ...styles.status,
-                      background: isSuccess ? "#e8f5e9" : "#ffebee",
-                      color: isSuccess ? "#2e7d32" : "#c62828",
-                    }}
-                  >
-                    {isSuccess ? "Success" : "Failed"}
-                  </span>
+        <div style={styles.list}>
+          {userDonationData &&
+            userDonationData.map((item) => {
+              const isSuccess = item.status === "success";
+              return (
+                <div key={item._id} style={styles.card}>
+                  <div style={styles.top}>
+                    <span style={styles.amount}>₹ {item.amount}</span>
+
+                    <span
+                      style={{
+                        ...styles.status,
+                        background: isSuccess ? "#e8f5e9" : "#ffebee",
+                        color: isSuccess ? "#2e7d32" : "#c62828",
+                      }}
+                    >
+                      {isSuccess ? "Success" : "Failed"}
+                    </span>
+                  </div>
+
+                  <div style={styles.meta}>
+                    <span>
+                      <strong>Payment ID:</strong>{" "}
+                      {item.paymentIntentId.slice(0, 12)}...
+                    </span>
+                    <span>
+                      <strong>Date:</strong>{" "}
+                      {new Date(item.createdAt).toLocaleString()}
+                    </span>
+                  </div>
                 </div>
-
-                <div style={styles.meta}>
-                  <span>
-                    <strong>Payment ID:</strong>{" "}
-                    {item.paymentIntentId.slice(0, 12)}...
-                  </span>
-                  <span>
-                    <strong>Date:</strong>{" "}
-                    {new Date(item.createdAt).toLocaleString()}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -69,18 +77,25 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
-    padding: "70px",
-    marginLeft: "70px",    
-    overflowX: "auto",
+
+    marginLeft: "70px", // ✅ EXACT width of NewNav
+    padding: "20px",
+
+    overflowX: "hidden",
   },
-gap:{
-    marginLeft: "90px",   
-},
+
   heading: {
     textAlign: "center",
-    margin: "30px 0",
-    fontSize: "26px",
+    margin: "20px 0 10px",
+    fontSize: "28px",
     color: "#0d47a1",
+  },
+
+  subHeading: {
+    textAlign: "center",
+    marginBottom: "30px",
+    fontSize: "20px",
+    color: "#1a237e",
   },
 
   empty: {
@@ -102,7 +117,6 @@ gap:{
     padding: "18px 22px",
     borderRadius: "14px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-    transition: "transform 0.2s",
   },
 
   top: {
