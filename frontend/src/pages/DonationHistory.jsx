@@ -75,7 +75,7 @@ const styles = {
   },
 gap:{
     marginLeft: "90px",   
-}
+},
   heading: {
     textAlign: "center",
     margin: "30px 0",
