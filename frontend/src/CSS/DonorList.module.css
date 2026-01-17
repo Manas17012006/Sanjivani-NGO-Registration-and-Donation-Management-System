@@ -91,7 +91,7 @@
   }
   .title
   {
-    text-align: center;
+    margin-left:50px;
   }
   .header {
     flex-direction: column;
