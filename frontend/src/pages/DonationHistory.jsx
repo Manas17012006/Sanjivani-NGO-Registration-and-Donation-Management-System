@@ -70,6 +70,8 @@ const styles = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
     paddingBottom: "40px",
+    marginLeft: "70px",    
+    overflowX: "auto",
   },
 
   heading: {
