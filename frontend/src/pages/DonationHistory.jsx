@@ -25,10 +25,10 @@ const DonationHistory = () => {
 
       {/* Content */}
       <div style={styles.page}>
-        <div style={styles.bigdiv}><h2 style={styles.heading}>Donation History</h2></div>
-        <h3 style={styles.subHeading}>
-          Total Donation : ₹ {totalDonation}
-        </h3>
+        <div style={styles.header}>
+          <h2 style={styles.heading}>Donation History</h2>
+          <h3 style={styles.subHeading}>Total Donation : ₹ {totalDonation}</h3>
+        </div>
 
         {userDonationData && userDonationData.length === 0 && (
           <p style={styles.empty}>No donations yet</p>
@@ -76,30 +76,26 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
-
-   
-    marginLeft: "260px",   
+    marginLeft: "260px", // keep if sidebar exists
     padding: "20px",
-
     overflowX: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center", // center content horizontally
   },
-  bigdiv:{
-    width:"100vw",
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-    textAlign:"center"
-  },
-  heading: {
+
+  header: {
     textAlign: "center",
+    marginBottom: "30px",
+  },
+
+  heading: {
     margin: "20px 0 10px",
     fontSize: "28px",
     color: "#0d47a1",
   },
 
   subHeading: {
-    textAlign: "center",
-    marginBottom: "30px",
     fontSize: "20px",
     color: "#1a237e",
   },
@@ -111,11 +107,10 @@ const styles = {
 
   list: {
     maxWidth: "700px",
-    margin: "0 auto",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     gap: "18px",
-    padding: "0 16px",
   },
 
   card: {
