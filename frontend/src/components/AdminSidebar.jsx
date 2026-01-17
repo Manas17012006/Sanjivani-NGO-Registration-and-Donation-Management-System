@@ -46,6 +46,7 @@ export default function AdminSidebar() {
           position: fixed;
           top: 0;
           left: 0;
+          zIndex:2;
           width: 260px;
           height: 100vh;
           background: #ffffff;
@@ -129,7 +130,7 @@ export default function AdminSidebar() {
         {open ? <X /> : <Menu />}
       </button>
 
-      {/* Sidebar */}
+
       <aside className={`sidebar ${open ? "open" : ""}`}>
         <div className="sidebar-header">
           <h1>Admin Panel</h1>
