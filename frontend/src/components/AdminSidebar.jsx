@@ -59,7 +59,7 @@ export default function AdminSidebar() {
         .sidebar-header {
           padding-bottom: 20px;
           border-bottom: 1px solid #eee;
-          margin-left:40px;
+          margin-left:50px;
         }
 
         .sidebar-header h1 {
