@@ -53,6 +53,7 @@ export default function AdminSidebar() {
           padding: 20px 15px;
           display: flex;
           flex-direction: column;
+          z-index:1000;
           transition: transform 0.3s ease;
         }
 
