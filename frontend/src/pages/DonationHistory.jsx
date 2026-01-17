@@ -78,9 +78,9 @@ const styles = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
 
-    marginLeft: "70px", // ✅ EXACT width of NewNav
+    marginLeft: "70px", 
     padding: "20px",
-
+    marginTop:"150px",
     overflowX: "hidden",
   },
 
