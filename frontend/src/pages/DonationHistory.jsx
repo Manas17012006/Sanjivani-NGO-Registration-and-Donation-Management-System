@@ -87,7 +87,8 @@ const styles = {
     width:"100vw",
     display:"flex",
     alignItems:"center",
-    justifyContent:"center"
+    justifyContent:"center",
+    textAlign:"center"
   },
   heading: {
     textAlign: "center",
