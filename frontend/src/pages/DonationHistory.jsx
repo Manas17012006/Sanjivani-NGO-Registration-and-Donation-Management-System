@@ -20,12 +20,12 @@ const DonationHistory = () => {
 
   return (
     <>
-      {/* ✅ Sidebar */}
+      {/* Sidebar */}
       <NewNav />
 
-      {/* ✅ Page content starts AFTER sidebar */}
+      {/* Content */}
       <div style={styles.page}>
-        <h2 style={styles.heading}>Donation History</h2>
+        <div style={styles.bigdiv}><h2 style={styles.heading}>Donation History</h2></div>
         <h3 style={styles.subHeading}>
           Total Donation : ₹ {totalDonation}
         </h3>
@@ -42,7 +42,6 @@ const DonationHistory = () => {
                 <div key={item._id} style={styles.card}>
                   <div style={styles.top}>
                     <span style={styles.amount}>₹ {item.amount}</span>
-
                     <span
                       style={{
                         ...styles.status,
@@ -78,12 +77,18 @@ const styles = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #e3f2fd, #f8fbff)",
 
-    marginLeft: "2700px", 
+   
+    marginLeft: "260px",   
     padding: "20px",
-    marginTop:"150px",
+
     overflowX: "hidden",
   },
-
+  bigdiv:{
+    width:"100vw",
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center"
+  },
   heading: {
     textAlign: "center",
     margin: "20px 0 10px",
