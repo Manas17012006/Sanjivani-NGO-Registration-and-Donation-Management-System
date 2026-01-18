@@ -115,3 +115,9 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 VITE_BACKEND_URL=your_backend_url
 ```
 
+
+## Demo Video
+
+The video shows complete working of the NGO registration and management system:
+
+https://youtu.be/p4BJ80C26J0
