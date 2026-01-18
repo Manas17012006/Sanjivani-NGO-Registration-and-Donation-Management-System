@@ -121,3 +121,8 @@ VITE_BACKEND_URL=your_backend_url
 The video shows complete working of the NGO registration and management system:
 
 https://youtu.be/p4BJ80C26J0
+## Admin Credentials
+
+Email :  none48504@gmail.com
+
+Password: January@2026
