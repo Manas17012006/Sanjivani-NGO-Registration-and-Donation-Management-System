@@ -119,7 +119,7 @@ VITE_BACKEND_URL=your_backend_url
 ## Demo Video
 
 The video shows complete working of the NGO registration and management system:
-https://youtu.be/ZXATv4aSJXA
+https://drive.google.com/drive/folders/1MKhB5rRypOCezxjhXCI5d8lrgIPuSu0i?usp=sharing
 ## Admin Credentials
 
 Email :  none48504@gmail.com
